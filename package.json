@@ -1,6 +1,6 @@
 {
   "name": "@layers/amba-shared",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared TypeScript types and constants for the amba SDKs.",
   "type": "module",
   "main": "./dist/index.js",
@@ -22,7 +22,7 @@
   "bugs": {"url": "https://github.com/layers/amba-shared/issues"},
   "publishConfig": {"access": "public"},
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && tsc --emitDeclarationOnly",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist",

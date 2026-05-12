@@ -11,7 +11,7 @@ export default defineConfig({
     'src/reserved-collection-prefixes.ts',
   ],
   format: 'esm',
-  dts: true,
+  dts: false,
   sourcemap: false,
   clean: true,
 });

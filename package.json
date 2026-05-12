@@ -1,0 +1,36 @@
+{
+  "name": "@layers/amba-shared",
+  "version": "0.1.0",
+  "description": "Shared TypeScript types and constants for the amba SDKs.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {"import": "./dist/index.js", "types": "./dist/index.d.ts"},
+    "./platform-types": {"import": "./dist/platform-types.js", "types": "./dist/platform-types.d.ts"},
+    "./social-types": {"import": "./dist/social-types.js", "types": "./dist/social-types.d.ts"},
+    "./economy-types": {"import": "./dist/economy-types.js", "types": "./dist/economy-types.d.ts"},
+    "./gamification-types": {"import": "./dist/gamification-types.js", "types": "./dist/gamification-types.d.ts"},
+    "./referral-codes": {"import": "./dist/referral-codes.js", "types": "./dist/referral-codes.d.ts"},
+    "./reserved-collection-prefixes": {"import": "./dist/reserved-collection-prefixes.js", "types": "./dist/reserved-collection-prefixes.d.ts"}
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "license": "Apache-2.0",
+  "engines": {"node": ">=22"},
+  "homepage": "https://amba.dev",
+  "repository": {"type": "git", "url": "git+https://github.com/layers/amba-shared.git"},
+  "bugs": {"url": "https://github.com/layers/amba-shared/issues"},
+  "publishConfig": {"access": "public"},
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsdown": "^0.12.5",
+    "typescript": "^5.8.3"
+  }
+}
